@@ -1,0 +1,662 @@
+:root {
+	--black: #000000;
+	--white: #ffffff;
+	--offWhite: #f8f8ff;
+	--green: #385723;
+}
+
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	font-family: "Century Gothic", sans-serif; 
+	background-color: var(--offWhite);
+	height: 100%;	  
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+form {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-container {
+	position: relative;
+	min-height: 100%;
+}
+
+#content-container {
+	padding-bottom: 60px;    /* Footer height */
+}
+
+
+/* Navigation Styles Start */
+Nav {
+	top: 0px;
+	width: 100%;
+	position: fixed;
+	background-color: var(--green);
+	z-index: 1;
+}
+
+.navWrapper {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	max-width: 1000px;
+	justify-content: space-between;
+}
+
+.collapsedUI {
+	display: none;
+}
+
+.navContent {
+	display: flex;
+	gap: 1px;
+	font-size: 11px;
+	width: fit-content;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.navContent ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.navContent li {
+	padding: 10px;
+	list-style-type: none;
+}
+
+.navContent a {
+	color: var(--white);
+	padding: 5px 0 5px 0;
+	text-decoration: none;
+	letter-spacing: 5px;
+}
+
+.navContent a:hover {
+	color: var(--white);
+	text-shadow:0px 0px 1px var(--white);
+}
+
+.active {
+	color: var(--white);
+	text-shadow:0px 0px 3px var(--white);
+}
+/* Navigation Styles End */
+
+
+/* Website Banner Styles Start */
+.spacer {
+	height: 75px;
+}
+
+.banner {
+    background-image: url(../images/DWIBanner.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 250px;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1000px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Website Banner Styles End */
+
+
+/* General Page Styles Start */
+.content-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1000px;
+	height: fit-content;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.content-title {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 5px;
+	font-size: 15px;
+	color: var(--white);
+	margin: 0 auto;
+	width: 100%;
+	background-color: var(--green);
+	height: 60px;
+	border-radius: 7px 7px 0 0;
+	box-shadow: 0px -10px 20px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 0.9em;
+	margin: 0 auto;
+	width: 100%;
+	height: fit-content;
+	padding: 30px;
+	margin-top: 5px;
+	border-radius: 0 0 7px 7px;
+	box-shadow: 0 10px 20px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content-container > p {
+	width: 100%;
+}
+/* General Page Styles End */
+
+
+/* Index Page Styles Start */
+.search-wrapper {
+	width: 90%;
+	max-width: 980px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	height: 50px;
+	padding: 10px;
+}
+
+#search-input {
+	width: 60%;
+	height: 42px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 5px 0 0 5px;
+	padding: 10px;
+}
+
+#search-button {
+	width: 10%;
+	height: 83%;
+	background-color: var(--green);
+	border: 1px solid black;
+	border-radius: 0 5px 5px 0;
+}
+
+.card-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1000px;
+	height: fit-content;
+	margin-bottom: 20px;
+	gap: 10px;
+}
+
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 32%;
+	min-width: 280px;
+	border-radius: 10px;
+	height: 290px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-title {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 5px;
+	font-size: 15px;
+	color: var(--white);
+	margin: 0 auto;
+	width: 95%;
+	background-color: var(--green);
+	height: 60px;
+	margin-top: 2.5%;
+	border-radius: 7px 7px 0 0;
+}
+
+.card-title > p:nth-child(1){
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	font-size: 14px;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: 60%;
+}
+
+.card-title > p:nth-child(2){
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 90%;
+	height: 30%;
+	font-size: 5px;
+}
+
+.card-image {
+	margin: 0 auto;
+	width: 95%;
+	overflow: hidden;
+	background-color: lightgray;
+	height: 170px;
+	margin-top: 1%;
+	border-radius: 0 0 7px 7px;
+}
+
+.card-availability {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30px;
+	width: 32.5%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	margin-left: 2.5%;
+}
+
+.card-link {
+	text-decoration: none;
+	height: 30px;
+	width: 100%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	margin-right: 2.5%;
+}
+
+.card-form {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.card-button-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 30px;
+	width: 62.5%;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	margin-right: 2.5%;
+}
+
+.card-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 5px;
+	border-radius: 5px;
+	font-size: 12px;
+	height: 30px;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.card-button:hover {
+	transition: 1s;
+	background-color: black;
+	color: white;
+}
+/* Index Page Styles End */
+
+
+/* Register Page Styles Start */
+.register-form-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 45%;
+	height: fit-content;
+	padding: 10px;
+}
+
+.register-form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	height: fit-content;
+}
+
+.register-form input{
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	height: 30px;
+	width: 90%;
+}
+
+.register-form label{
+	font-size: 1.1em;
+	margin-bottom: 5px;
+	letter-spacing: 2px;
+	width: 90%;
+}
+
+#register-form-button {
+	width: 50%;
+	height: 30px;
+	background-color: var(--green);
+	border-radius: 5px;
+	color: white;
+	letter-spacing: 2px;
+}
+
+#register-form-button:hover {
+	background-color: var(--black);
+	transition: 2s;
+}
+/* Register Page Styles End */
+
+
+/* Login Page Styles Start */
+.login-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 30%;
+	height: 1000px;
+	margin: 0 auto;
+	max-width: 1000px;
+	height: fit-content;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.login-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.login-form > input {
+	width: 80%;
+	border: 1px solid lightgrey;
+	height: 30px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.login-form > label {
+	width: 80%;
+}
+
+.login-form > a {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	color: black;
+	letter-spacing: 2px;
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+
+.login-form > button {
+	width: 25%;
+	height: 30px;
+	background-color: var(--green);
+	border-radius: 5px;
+	color: white;
+	letter-spacing: 2px;
+}
+/* Login Page Styles End */
+
+
+/* Footer Styles Start */
+Footer {
+	position: absolute;
+	bottom: 0;
+	color: white;
+	width: 100%;
+	height: 60px;
+	background-color: var(--green);
+	z-index: 1;
+}
+
+.footerWrapper {
+	width: 90%;
+	height: 100%;
+	display: flex;
+	margin: 0 auto;
+	max-width: 1000px;
+	justify-content: space-between;
+}
+
+.footerContent {
+	display: flex;
+	gap: 1px;
+	font-size: 11px;
+	width: fit-content;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.socialWrapper {
+	display: flex;
+	justify-content: center;
+	width: 120px;
+	gap: 2px;
+	margin: 0 auto;
+}
+
+.instagram {
+	background-color: #CD486B;
+}
+
+.facebook {
+	background-color: #3B5998;
+}
+
+.twitter {
+	background-color: #1DA1F2;
+}
+
+.social  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	width: 30px;
+	border: 1px solid var(--black);
+}
+
+.social:hover {
+	background-color: black;
+	transition: 2s;
+}
+/* Footer Styles End */
+
+
+#petNotice {
+	margin-top: 20px;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	border: solid 1px black;
+	position: absolute;
+	background-color: var(--green);
+	border-radius: 5px;
+	z-index: 1;
+	right: auto;
+    left: 51%;
+    -webkit-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);	
+}
+
+.dropdown:hover .dropdown-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+	height: fit-content;
+	text-align: center;
+	padding: 20px;
+}
+
+
+#booking-form-button {
+	width: 50%;
+	height: 30px;
+	background-color: var(--green);
+	border-radius: 5px;
+	color: white;
+	letter-spacing: 2px;
+}
+
+#booking-form-button:hover {
+	background-color: var(--black);
+	transition: 2s;
+}
+
+.book-button-contain{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.booking-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 2px;
+	width: 100%;
+	border: 1px solid black;
+	padding: 5px;
+	border-radius: 5px;
+	align-items: center;
+
+}
+
+.delete-booking {
+	margin: 0;
+	margin-left: 10px;
+	width: 20%;
+}
+
+.booking-container > p {
+	width: 40%;
+	text-align: center;
+}
+/*Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {	
+	.banner {
+		min-height: 200px;
+	}
+}
+
+/*Phone Styles */
+@media screen and (max-width: 767px) {
+	.banner {
+		min-height: 150px;
+	}
+
+	.login-wrapper {
+		width: 90%;
+	}
+
+	.card-wrapper {
+		width: 100%;
+	}	
+
+	.card {
+		width: 90%;
+	}
+
+	.collapsedUI {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.navWrapper {
+		height: fit-content;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#brandLogo {
+		display: none;
+	}
+
+	.navContent {
+		display: none; 
+	}
+
+	.navContentShow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navContent ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 20px;
+	}
+
+	.hamburger {
+		border: none;
+		background-color: transparent;
+		padding-right: 15px;
+	}
+
+	.footerContent {
+		display: flex;
+		color: white;
+	}
+
+	.register-form-container {
+		width: 100%;
+
+	}
+
+	#register-form-button {
+		width: 50%;
+	}
+
+	.spacer {
+		height: 60px;
+	}
+
+}
